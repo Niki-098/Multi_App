@@ -5,7 +5,7 @@ from qa_bot_page import qa_bot_app
 
 st.set_page_config(page_title="Multi-App AI", page_icon="", layout="wide")
 
-st.sidebar.title("AI Multi-App Suite")
+st.sidebar.title("AI Multi-App")
 app_choice = st.sidebar.radio(
     "Choose an App:",
     ["📝 Text Summarizer", "💰 Expense Tracker", "💬 AI Q&A Bot"]
