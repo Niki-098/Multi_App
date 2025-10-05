@@ -24,7 +24,7 @@ Responsive UI with loading indicators for API calls.<br>
 
 Clone the repository<br>
 
-*git clone https://github.com/YourUsername/Multi_App.git<br>
+*git clone https://github.com/Niki-098/Multi_App<br>
 cd Multi_App*
 
 
