@@ -12,16 +12,16 @@ def summarizer_app():
 
     if uploaded_file is not None:
         st.info(f"**File uploaded:** {uploaded_file.name}")
-        if st.button("✨ Summarize"):
+        if st.button("Summarize"):
             try:
-                with st.spinner("Summarizing your document... Please wait ⏳"):
+                with st.spinner("Summarizing your document... Please wait"):
                     files = {"file": (uploaded_file.name, uploaded_file, uploaded_file.type)}
                     response = requests.post(BACKEND_URL, files=files)
 
                     if response.status_code == 200:
                         data = response.json()
                         if "summary" in data:
-                            st.success("✅ Summary generated successfully!")
+                            st.success("Summary generated successfully!")
                             st.subheader("📄 Summary:")
                             st.write(data["summary"])
                         else:
