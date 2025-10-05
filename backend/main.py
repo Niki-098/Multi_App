@@ -6,11 +6,11 @@ from dotenv import load_dotenv
 from PyPDF2 import PdfReader
 import docx
 
-load_dotenv()  # Load environment variables from .env
+load_dotenv()  
 
 app = FastAPI()
 
-# Allow CORS for frontend requests
+#Allow CORS for frontend requests
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],
@@ -19,7 +19,7 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-# ✅ Configure Gemini API Key
+
 genai.configure(api_key=os.getenv("GEMINI_API_KEY"))
 
 @app.get("/")
